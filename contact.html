@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Raphcompta</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">Raphcompta</a>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="outils.html">Outils</a>
+      <a href="ressources.html">Ressources</a>
+      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nous contacter</h1>
+    <p>Écrivez-nous ou prenez rendez-vous. Mail : <a href="mailto:raphael.condere@gmail.com">raphael.condere@gmail.com</a></p>
+
+   
+    <form id="contact" class="outil-form" action="#" method="get">
+      <label for="nom">Nom</label>
+      <input id="nom" name="nom" type="text" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="tel">Téléphone</label>
+      <input id="tel" name="tel" type="tel">
+
+      <label for="sujet">Sujet</label>
+      <select id="sujet" name="sujet">
+        <option>Prise de rendez-vous</option>
+        <option>Demande de devis</option>
+        <option>Autre</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button class="bouton" type="submit">Envoyer</button>
+    </form>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
+    </nav>
+  </footer>
+</body>
+</html>

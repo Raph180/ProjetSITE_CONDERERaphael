@@ -1,0 +1,73 @@
+* { box-sizing: border-box; }
+
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.5; color: #222; background: #f5f7fa; }
+
+
+h1, h2, h3 { color: #1f4e79; }
+a { color: #1f4e79; }
+
+
+header, footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 16px 5%; background: #1f4e79; color: #fff; }
+footer p { margin: 0; }
+
+
+.logo { font-size: 1.4rem; font-weight: bold; color: #fff; text-decoration: none; }
+
+
+header a, footer a { color: #fff; text-decoration: none; }
+nav a { margin-left: 15px; }
+nav a:hover { text-decoration: underline; color: #7fdcbc; }
+
+
+main { width: 90%; max-width: 1000px; margin: 0 auto; padding: 20px 0 40px; }
+
+
+h1 + p, h2 + p { color: #555; }
+
+.hero { background: linear-gradient(135deg, #1f4e79, #2f7ab8); color: #fff; text-align: center; padding: 60px 20px; border-radius: 10px; margin-bottom: 30px; }
+.hero h1 { color: #fff; }
+.hero h1 + p { color: #fff; }
+
+
+.cartes { display: flex; flex-wrap: wrap; gap: 20px; }
+
+
+.cartes > article { flex: 1 1 220px; background: #fff; padding: 20px; border: 1px solid #d8dee6; border-radius: 10px; }
+.cartes > article:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+
+.chiffres { display: flex; justify-content: space-around; flex-wrap: wrap; background: #1f4e79; color: #fff; padding: 30px; border-radius: 10px; text-align: center; }
+.chiffres strong { display: block; font-size: 2.2rem; color: #7fdcbc; }
+
+.bouton { display: inline-block; background: #1fa37a; color: #fff; padding: 12px 24px; border: 0; border-radius: 25px; text-decoration: none; font-size: 1rem; cursor: pointer; }
+.bouton:hover { background: #17806a; }
+.bouton-clair { background: transparent; border: 2px solid #fff; }
+
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: 10px; border: 1px solid #d8dee6; text-align: left; }
+th { background: #1f4e79; color: #fff; }
+
+label { display: block; margin-top: 12px; font-weight: bold; }
+input[type="text"], input[type="email"], input[type="tel"], select, textarea { width: 100%; padding: 10px; border: 2px solid #ccd5df; border-radius: 6px; font-size: 1rem; }
+input[type="radio"] { margin-right: 6px; }
+.erreur { color: #c0392b; font-weight: bold; min-height: 1.5em; }
+
+
+#formulaire, #contact { background: #fff; padding: 20px; border-radius: 10px; }
+
+
+.outil { display: flex; flex-wrap: wrap; gap: 20px; }
+.outil > form, .outil > .resultat { flex: 1 1 300px; }
+.resultat { background: #e5f6f0; padding: 20px; border-radius: 10px; }
+.note { font-size: 0.9rem; color: #777; }
+
+
+.encadre { background: #fff; padding: 15px 20px; margin-bottom: 15px; border-left: 5px solid #1fa37a; border-radius: 6px; }
+details { background: #fff; padding: 10px 15px; margin-bottom: 8px; border: 1px solid #d8dee6; border-radius: 6px; }
+summary { cursor: pointer; font-weight: bold; }
+
+@media (max-width: 768px) {
+  header, footer { flex-direction: column; text-align: center; }
+  nav a { display: inline-block; margin: 8px 6px 0; }
+  .chiffres { flex-direction: column; gap: 20px; }
+  .hero { padding: 40px 15px; }
+}

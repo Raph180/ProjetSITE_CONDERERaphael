@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outils - Raphcompta</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">Raphcompta</a>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="outils.html">Outils</a>
+      <a href="ressources.html">Ressources</a>
+      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nos outils gratuits</h1>
+
+    <h2>Calculateur de TVA</h2>
+    <p>Calculez le montant HT, la TVA et le TTC.</p>
+
+    <div class="outil">
+      <form id="formulaire" novalidate>
+        <label for="montant">Montant (en euros)</label>
+        <input id="montant" type="text" inputmode="decimal" placeholder="Ex : 100">
+
+        <label for="taux">Taux de TVA</label>
+        <select id="taux">
+          <option value="20">20 %</option>
+          <option value="10">10 %</option>
+          <option value="5.5">5,5 %</option>
+          <option value="2.1">2,1 %</option>
+        </select>
+
+        <label><input type="radio" name="mode" value="ht" checked> HT vers TTC</label>
+        <label><input type="radio" name="mode" value="ttc"> TTC vers HT</label>
+
+        <p id="erreur" class="erreur"></p>
+        <button class="bouton" type="submit">Calculer</button>
+      </form>
+
+      <div class="resultat">
+        <h2>Résultat</h2>
+        <p>HT : <strong id="res-ht">-</strong></p>
+        <p>TVA : <strong id="res-tva">-</strong></p>
+        <p>TTC : <strong id="res-ttc">-</strong></p>
+      </div>
+    </div>
+    <p class="note"></p>
+
+    <h2>Simulateur de prêt</h2>
+    <p>Calculez votre mensualité et affichez le tableau d'amortissement mois par mois.</p>
+
+    <div class="outil">
+      <form id="form-pret" novalidate>
+        <label for="montant-pret">Montant emprunté (en euros)</label>
+        <input id="montant-pret" type="text" inputmode="decimal" placeholder="Ex : 20000">
+
+        <label for="taux-pret">Taux annuel (en %)</label>
+        <input id="taux-pret" type="text" inputmode="decimal" placeholder="Ex : 3,5">
+
+        <label for="duree-pret">Durée : <span id="affichage-duree">5 ans</span></label>
+<input id="duree-pret" type="range" min="1" max="30" value="5">
+        <p id="erreur-pret" class="erreur"></p>
+        <button class="bouton" type="submit">Simuler</button>
+      </form>
+
+      <div class="resultat">
+        <h3>Résultat</h3>
+        <p>Mensualité : <strong id="res-mensualite">-</strong></p>
+        <p>Coût total du crédit (intérêts) : <strong id="res-interets">-</strong></p>
+        <p>Total remboursé : <strong id="res-total">-</strong></p>
+        <div class="barre"><span id="barre-capital"></span></div>
+        
+      </div>
+    </div>
+
+    <h3>Tableau d'amortissement</h3>
+    <div class="defilement">
+      <table>
+        <thead>
+          <tr><th>Mois</th><th>Mensualité</th><th>Intérêts</th><th>Capital remboursé</th><th>Capital restant dû</th></tr>
+        </thead>
+        <tbody id="corps-pret">
+          <tr><td colspan="5">Lancez une simulation pour afficher le tableau.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"></p>
+
+    <script src="../js/tva.js" defer></script>
+    <script src="../js/pret.js" defer></script>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
+    </nav>
+  </footer>
+</body>
+</html>
